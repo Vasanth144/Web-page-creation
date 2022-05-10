@@ -1,0 +1,77 @@
+<!Doctype html>
+<html>
+<head>
+<title>Online book store</title>
+<style>
+body{
+background-color:skyblue;
+}
+div{
+ border: 2px solid red;
+ width:300px;
+ margin:auto;
+ padding:20px;
+}
+</style>
+</head>
+<body>
+<script>
+function val()
+{
+ var p=document.forms.fname.value;
+ var q=document.forms.lname.value;
+ var r=document.forms.email.value;
+ var a=document.forms.pass.value;
+ var s=r.substr(r.length -9);
+ var w=document.forms.pass.value;
+ var e=document.forms.nage.value;
+var cu=new Date();
+var ag=new Date(document.forms.nage.value);
+ if(p=="" || p==null)
+ {
+  alert("First name should not be null");
+  return false;
+ }
+ else if(q==""||q==null)
+{
+ alert("last name can't be null");
+ return false;
+}
+else if(s==""|| s!="@gitam.in")
+{
+ alert("invalid email");
+ return false;
+}
+else if(w==""|| w.length<8)
+{
+ alert("invalid password");
+ return false;
+}
+else if(e==""||ag>cu)
+{
+ alert("invalid age");
+ return false;
+}
+}
+</script>
+<h1><b><center>Online book store</center></h1></p>
+<div>
+<center>
+<form name="forms" method="post" onsubmit="return val()">
+First name:<input type="text" name="fname"><br><br>
+Last name:<input type="text" name="lname"><br><br>
+<label>Gender</label>
+<select name="Gender">
+    <option value="Male">Male</option>
+    <option value="Female">Female</option>
+    <option value="Others">Others</option>
+  </select><br><br>
+Email:<input type="text" name ="email"><br><br>
+Password:<input type="text" name="pass"><br><br>
+Age: <input type="date" name="nage"><br><br>
+<button type ="submit" class="button">Submit</button>
+
+<input type="reset" Value="Reset">
+</center>
+</div>
+</form>
